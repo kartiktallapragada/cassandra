@@ -119,7 +119,10 @@ INSERT INTO friends_relations (userid1,userid2,are_friends) VALUES (99051fe9-6a9
 INSERT INTO friends_relations (userid1,userid2,are_friends) VALUES (99051fe9-6a9c-46c2-b949-38ef78858dd4,99051fe9-6a9c-46c2-b949-38ef78858dd5, true);
 INSERT INTO friends_relations (userid1,userid2,are_friends) VALUES (99051fe9-6a9c-46c2-b949-38ef78858dd5,99051fe9-6a9c-46c2-b949-38ef78858dd3, true);
 
-
+//INDEXES
+use facebooklite;
+CREATE INDEX IF NOT EXISTS userid_posts on facebooklite.posts (userid);
+CREATE INDEX IF NOT EXISTS frnd_relIDX on facebooklite.friends_relations (are_friends);
 
 
 
